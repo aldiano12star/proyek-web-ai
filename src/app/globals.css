@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/*
+  Saba Exploit — "Tactical Deadpool Bento" design tokens (see DESIGN.md).
+  Tailwind v4 reads @theme to generate utilities, e.g.:
+    --color-deadpool-red  -> bg-deadpool-red / text-deadpool-red / border-deadpool-red
+    --font-display        -> font-display
+*/
+@theme {
+  --color-canvas-black: #060608; /* page background */
+  --color-card-dark: #121216; /* bento card base */
+  --color-deadpool-red: #e23636; /* highlights, buttons, active borders */
+  --color-deadpool-white: #f3f3f5; /* high-contrast text */
+  --color-slate-border: #212126; /* default component border */
+
+  /* Fonts are loaded via next/font in layout.tsx and exposed as CSS vars */
+  --font-display: var(--font-outfit), system-ui, sans-serif; /* huge headings */
+  --font-sans: var(--font-inter), system-ui, sans-serif; /* body copy */
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace; /* terminal */
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-canvas-black);
+  color: var(--color-deadpool-white);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Solid (blur-free) comic drop-shadow used on active/hovered bento + buttons */
+@utility shadow-comic {
+  box-shadow: 6px 6px 0 0 var(--color-deadpool-red);
+}
+
+/* Faint tactical grid used behind the hero (overlaid at low opacity) */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, var(--color-slate-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-slate-border) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Blinking terminal caret in the hero eyebrow (foreshadows the SABA terminal) */
+@keyframes caret-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.caret {
+  animation: caret-blink 1.1s steps(1) infinite;
+}
+
+/*
+  Infinite Hall-of-Fame marquee (F05). Pure GPU transform — the track holds two
+  identical copies of the list, so translating by exactly -50% loops seamlessly
+  with zero React re-renders. Duration/direction are CSS vars so a second row
+  can run slower or in reverse. Applied via `animate-marquee` on the flex track.
+*/
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@utility animate-marquee {
+  animation: marquee var(--marquee-duration, 38s) linear infinite;
+  animation-direction: var(--marquee-direction, normal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .caret {
+    animation: none;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
