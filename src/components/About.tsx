@@ -21,9 +21,6 @@ export default async function About() {
     <section id="tentang" className="scroll-mt-20 px-5 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <header className="mb-10 flex flex-col gap-3">
-          <p className="font-mono text-xs uppercase tracking-widest text-deadpool-red">
-            {"// 01 — Origin Story"}
-          </p>
           <h2 className="font-display text-4xl font-black tracking-tight sm:text-5xl">
             SIAPA DI BALIK LAYAR?
           </h2>
@@ -49,10 +46,7 @@ export default async function About() {
           <div className="grid gap-4 lg:col-span-5">
             {/* Visi: terminal-style fourth-wall manifesto */}
             <article className="group relative flex flex-col justify-center overflow-hidden rounded-xl border border-slate-border bg-card-dark p-7 transition duration-300 hover:-translate-y-1 hover:border-deadpool-red hover:shadow-comic">
-              <p className="font-mono text-xs uppercase tracking-widest text-deadpool-white/40">
-                {"// visi.exe"}
-              </p>
-              <p className="mt-3 font-display text-xl font-black leading-snug text-deadpool-white">
+              <p className="font-display text-xl font-black leading-snug text-deadpool-white">
                 Bikin pemula jadi{" "}
                 <span className="text-deadpool-red">pro</span> — tanpa drama,
                 tanpa gatekeeping.
@@ -64,9 +58,6 @@ export default async function About() {
               href="#divisi"
               className="group relative flex flex-col justify-center gap-2 overflow-hidden rounded-xl border border-dashed border-slate-border p-7 transition duration-300 hover:-translate-y-1 hover:border-deadpool-red hover:shadow-comic focus:outline-none focus-visible:-translate-y-1 focus-visible:border-deadpool-red focus-visible:shadow-comic"
             >
-              <span className="font-mono text-xs uppercase tracking-widest text-deadpool-red">
-                {"// misi"}
-              </span>
               <span className="font-display text-lg font-black text-deadpool-white">
                 Lima divisi nunggu kamu. →
               </span>

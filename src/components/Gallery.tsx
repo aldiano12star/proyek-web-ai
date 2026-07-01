@@ -42,9 +42,6 @@ export default function Gallery({ photos }: { photos: GalleryPhoto[] }) {
     <section id="galeri" className="scroll-mt-20 px-5 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <header className="mb-10 flex flex-col gap-3">
-          <p className="font-mono text-xs uppercase tracking-widest text-deadpool-red">
-            {`// ${photos.length} Momen`}
-          </p>
           <h2 className="font-display text-4xl font-black tracking-tight sm:text-5xl">
             DI BALIK KAMERA
           </h2>
@@ -56,7 +53,7 @@ export default function Gallery({ photos }: { photos: GalleryPhoto[] }) {
 
         {photos.length === 0 ? (
           <p className="font-mono text-sm text-deadpool-white/40">
-            {"// belum ada foto — dokumentasi lagi disiapkan, pantengin terus."}
+            {"Belum ada foto — dokumentasi lagi disiapkan, pantengin terus."}
           </p>
         ) : (
           // CSS-columns masonry: items flow top-to-bottom then wrap to the next

@@ -20,9 +20,6 @@ export default function ProkerGrid({ programs }: { programs: Program[] }) {
     <section id="proker" className="scroll-mt-20 px-5 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <header className="mb-10 flex flex-col gap-3">
-          <p className="font-mono text-xs uppercase tracking-widest text-deadpool-red">
-            {`// ${programs.length} Proker`}
-          </p>
           <h2 className="font-display text-4xl font-black tracking-tight sm:text-5xl">
             AGENDA SATU MUSIM
           </h2>
@@ -34,7 +31,7 @@ export default function ProkerGrid({ programs }: { programs: Program[] }) {
 
         {programs.length === 0 ? (
           <p className="font-mono text-sm text-deadpool-white/40">
-            {"// data proker gagal dimuat — coba muat ulang halaman."}
+            {"Data proker gagal dimuat — coba muat ulang halaman."}
           </p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -63,7 +60,7 @@ export default function ProkerGrid({ programs }: { programs: Program[] }) {
                   {p.description}
                 </p>
                 <span className="mt-4 font-mono text-xs uppercase tracking-widest text-deadpool-white/40">
-                  {"// lihat detail"}
+                  Lihat detail
                 </span>
               </button>
             ))}

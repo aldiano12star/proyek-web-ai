@@ -59,12 +59,6 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a
-            href="#proker"
-            className="shadow-comic rounded-lg border border-deadpool-red bg-deadpool-red px-4 py-2 font-display text-sm font-bold text-canvas-black transition-transform hover:-translate-y-0.5"
-          >
-            OPREC
-          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -98,15 +92,6 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="pt-2">
-              <a
-                href="#proker"
-                onClick={() => setOpen(false)}
-                className="shadow-comic block rounded-lg border border-deadpool-red bg-deadpool-red px-3 py-2.5 text-center font-display font-bold text-canvas-black"
-              >
-                OPREC
-              </a>
-            </li>
           </ul>
         </div>
       )}

@@ -20,9 +20,6 @@ export default async function Divisions() {
     <section id="divisi" className="scroll-mt-20 px-5 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl">
         <header className="mb-10 flex flex-col gap-3">
-          <p className="font-mono text-xs uppercase tracking-widest text-deadpool-red">
-            {"// 5 Divisi"}
-          </p>
           <h2 className="font-display text-4xl font-black tracking-tight sm:text-5xl">
             PILIH MEDAN TEMPURMU
           </h2>
@@ -34,7 +31,7 @@ export default async function Divisions() {
 
         {divisions.length === 0 ? (
           <p className="font-mono text-sm text-deadpool-white/40">
-            {"// data divisi gagal dimuat — coba muat ulang halaman."}
+            {"Data divisi gagal dimuat — coba muat ulang halaman."}
           </p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -86,9 +83,6 @@ export default async function Divisions() {
               href="#proker"
               className="group flex flex-col items-start justify-center gap-2 rounded-xl border border-dashed border-slate-border p-6 transition duration-300 hover:-translate-y-1 hover:border-deadpool-red hover:shadow-comic focus:outline-none focus-visible:-translate-y-1 focus-visible:border-deadpool-red focus-visible:shadow-comic"
             >
-              <span className="font-mono text-xs uppercase tracking-widest text-deadpool-red">
-                {"// slot ke-6"}
-              </span>
               <span className="font-display text-2xl font-black text-deadpool-white">
                 ITU KAMU?
               </span>

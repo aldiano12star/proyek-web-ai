@@ -77,9 +77,6 @@ export default function ProkerModal({
               <X size={20} strokeWidth={3} />
             </button>
 
-            <p className="font-mono text-xs uppercase tracking-widest text-deadpool-red">
-              {"// proker"}
-            </p>
             <h3
               id="proker-modal-title"
               className="mt-2 font-display text-3xl font-black tracking-tight text-deadpool-white"
